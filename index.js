@@ -8,7 +8,7 @@ export function getServer() {
 
     server.route({
         method: 'GET',
-        url: '/test/models/:modelId::generateContent',
+        url: '/test/models/:modelId([^:]+)::generateContent',
         handler: async (request, reply) => {
             reply.send(request.params);
         }
